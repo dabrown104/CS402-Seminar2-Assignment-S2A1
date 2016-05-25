@@ -17,6 +17,12 @@ namespace WindowsApp24_S2A1_David_Brown
             return Task.CompletedTask;
         }
 
+        public override Task OnPrelaunchAsync(IActivatedEventArgs args, out bool runOnStartAsync)
+        {
+            runOnStartAsync = false;
+            return Task.CompletedTask;
+        }
+
         public override Task OnStartAsync(StartKind startKind, IActivatedEventArgs args)
         {
             NavigationService.Navigate(typeof(Views.MainPage));
